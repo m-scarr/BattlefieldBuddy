@@ -1,0 +1,46 @@
+{
+  "name": "battlefieldbuddy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "watch:client": "onchange \"./src/**/*.tsx\" \"./src/**/*.ts\" -- npm run build",
+    "watch:server": "nodemon --watch server.js --watch routes --watch controllers --watch config --watch socket --watch models --exec node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "http": "^0.0.1-security",
+    "mobx": "^6.12.0",
+    "mobx-react": "^9.1.0",
+    "mysql2": "^3.9.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sequelize": "^6.36.0",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "onchange": "^7.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
