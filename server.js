@@ -32,7 +32,11 @@ app.get('/', (_req, res) => {
 app.use(routes);
 
 export const io = new Server(server);
-const wrap = middleware => (socket, next) => middleware(socket.request, {}, next);
+const wrap = (middleware) => {
+    return (socket, next) => {
+        middleware(socket.request, {}, next);
+    }
+}
 
 io.use(wrap(sessionMiddleware));
 io.use(wrap(passport.initialize()));
